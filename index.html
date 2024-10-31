@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalSul Implantes - Landpage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+/* Estilos para o Hero */
+.hero {
+    background: url('images/dentalsul-hero.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra para contraste */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra para contraste */
+    margin-bottom: 2rem;
+}
+
+/* Estilos para o botão do hero */
+.btn-hero {
+    background-color: #007bff; /* Cor azul */
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+    transform: scale(1.05); /* Efeito de zoom no hover */
+}
+
+/* Estilos para o background com gradiente */
+#contato {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+/* Título e texto */
+#contato h3 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+#contato p {
+    color: #d4d8e8;
+    font-size: 1.125rem;
+}
+
+/* Estilos para os campos do formulário */
+.input-field {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    color: #1a1a1a;
+    background: #f8f9fa;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o botão de envio */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:hover {
+    background-color: #ff4d4d;
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Espaçamento e centralização */
+form.space-y-6 > * {
+    margin-bottom: 1.5rem;
+}
+
+
+/* Estilos para o Parallax */
+.parallax {
+    background: url('images/dentalsul-parallax.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-icon {
+    position: absolute;
+    font-size: 12rem; /* Tamanho do emoji gigante */
+    color: rgba(255, 255, 255, 0.1); /* Cor branca com baixa opacidade */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.parallax-text {
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para dar contraste */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.decorative-line {
+    width: 80px;
+    height: 4px;
+    background-color: white;
+    margin: 10px 0;
+    border-radius: 2px;
+    opacity: 0.7;
+}
+
+/* Estilos Gerais para o Texto */
+h1, h2, h3, h5 {
+    color: #1f3a93; /* Azul escuro para títulos */
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Sombra leve para destaque */
+}
+
+p, .text-gray-700 {
+    color: #4a4a4a; /* Cinza escuro para parágrafos */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Estilos para o botão do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* Responsividade: Reduz tamanho do botão no mobile */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+    .whatsapp-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+/* Estilos para Cartões de Serviço e Unidades */
+.service-card:hover, .bg-white:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animação de Fade-In */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para Dispositivos Móveis */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.25rem;
+    }
+    .parallax-icon {
+        font-size: 8rem; /* Reduz tamanho do emoji no mobile */
+    }
+    .parallax-text {
+        font-size: 1.8rem; /* Reduz tamanho do texto no mobile */
+    }
+}
+
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-900">
+
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-md fade-in">
+        <div class="container">
+            <a class="navbar-brand font-bold text-blue-700" href="#">DentalSul Implantes</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto space-x-4">
+                    <li class="nav-item"><a class="nav-link text-gray-700 hover:text-blue-500" href="#sobre">Sobre
+                            Nós</a></li>
+                    <li class="nav-item"><a class="nav-link text-gray-700 hover:text-blue-500"
+                            href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link text-gray-700 hover:text-blue-500"
+                            href="#unidades">Unidades</a></li>
+                    <li class="nav-item"><a class="nav-link text-gray-700 hover:text-blue-500"
+                            href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Seção Hero -->
+<section class="hero fade-in">
+    <div class="hero-overlay"></div>
+    <div class="hero-container text-center text-white">
+        <h1 class="text-5xl font-bold mb-4">Sorria com Confiança</h1>
+        <p class="text-lg mb-6">Tecnologia e expertise para o seu sorriso</p>
+        <a href="#contato" class="btn btn-hero">Agende Sua Consulta</a>
+    </div>
+</section>
+
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-20 bg-white fade-in">
+        <div class="container text-center">
+            <h2 class="text-4xl font-bold text-blue-700 mb-6">Sobre a DentalSul Implantes</h2>
+            <p class="text-lg text-gray-700 mb-12 mx-auto max-w-2xl">
+                A DentalSul Implantes oferece soluções completas em implantodontia e odontologia estética, com unidades
+                em várias cidades do Rio Grande do Sul.
+            </p>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="bg-gray-50 rounded-lg shadow-xl p-6 transition-transform transform hover:scale-105">
+                        <img src="images/sobre1.jpg" class="rounded-full shadow-lg mx-auto mb-4" alt="Sorriso saudável"
+                            width="200" height="200">
+                        <h5 class="font-semibold text-xl text-blue-700 mb-2">Especialistas em Implantodontia</h5>
+                        <p class="text-gray-600">Equipe altamente capacitada para oferecer implantes de qualidade.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="bg-gray-50 rounded-lg shadow-xl p-6 transition-transform transform hover:scale-105">
+                        <img src="images/sobre2.jpg" class="rounded-full shadow-lg mx-auto mb-4"
+                            alt="Tratamento personalizado" width="200" height="200">
+                        <h5 class="font-semibold text-xl text-blue-700 mb-2">Atendimento Personalizado</h5>
+                        <p class="text-gray-600">Foco no cuidado individual e atenção especial para cada paciente.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="bg-gray-50 rounded-lg shadow-xl p-6 transition-transform transform hover:scale-105">
+                        <img src="images/sobre3.jpg" class="rounded-full shadow-lg mx-auto mb-4" alt="Alta tecnologia"
+                            width="200" height="200">
+                        <h5 class="font-semibold text-xl text-blue-700 mb-2">Alta Tecnologia</h5>
+                        <p class="text-gray-600">Uso de equipamentos modernos para resultados precisos e rápidos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Seção Parallax -->
+<div class="parallax">
+    <div class="overlay"></div>
+    <span class="parallax-icon">🦷</span>
+    <div class="parallax-content">
+        <div class="decorative-line"></div>
+        <span class="parallax-text">Tratamento com Excelência e Cuidado</span>
+        <div class="decorative-line"></div>
+    </div>
+</div>
+
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 bg-gray-100 fade-in">
+        <div class="container text-center">
+            <h2 class="text-4xl font-bold text-blue-700 mb-6">Nossos Serviços</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg service-card">
+                        <img src="images/service1.jpg" class="card-img-top" alt="Implantologia" width="600"
+                            height="400">
+                        <div class="card-body">
+                            <h5 class="card-title font-bold">Implantologia</h5>
+                            <p class="card-text">Soluções seguras e estéticas para substituição de dentes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg service-card">
+                        <img src="images/service2.jpg" class="card-img-top" alt="Dentisteria Estética" width="600"
+                            height="400">
+                        <div class="card-body">
+                            <h5 class="card-title font-bold">Dentisteria Estética</h5>
+                            <p class="card-text">Restaurando a aparência natural e saudável do seu sorriso.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg service-card">
+                        <img src="images/service3.jpg" class="card-img-top" alt="Ortodontia" width="600" height="400">
+                        <div class="card-body">
+                            <h5 class="card-title font-bold">Ortodontia</h5>
+                            <p class="card-text">Correção da posição dos dentes para uma estética agradável.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Unidades -->
+<section id="unidades" class="py-20 bg-gray-100 fade-in">
+    <div class="container text-center">
+        <h2 class="text-4xl font-bold text-blue-700 mb-6">Nossas Unidades</h2>
+        <p class="text-lg text-gray-700 mb-12">Estamos presentes em várias cidades do Rio Grande do Sul!</p>
+
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="unit-card bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h5 class="font-semibold text-2xl text-blue-700 mb-2">São Gabriel</h5>
+                    <p class="text-gray-600">Rua Exemplo, 123 - Centro</p>
+                    <p class="text-gray-500 text-sm">Fone: (55) 1234-5678</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="unit-card bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h5 class="font-semibold text-2xl text-blue-700 mb-2">Rosário do Sul</h5>
+                    <p class="text-gray-600">Rua Exemplo, 456 - Centro</p>
+                    <p class="text-gray-500 text-sm">Fone: (55) 8765-4321</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="unit-card bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h5 class="font-semibold text-2xl text-blue-700 mb-2">Cacequi</h5>
+                    <p class="text-gray-600">Av. Exemplo, 789 - Centro</p>
+                    <p class="text-gray-500 text-sm">Fone: (55) 1122-3344</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="unit-card bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h5 class="font-semibold text-2xl text-blue-700 mb-2">São Francisco de Assis</h5>
+                    <p class="text-gray-600">Av. Exemplo, 1011 - Centro</p>
+                    <p class="text-gray-500 text-sm">Fone: (55) 5566-7788</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="unit-card bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h5 class="font-semibold text-2xl text-blue-700 mb-2">Manoel Vianna</h5>
+                    <p class="text-gray-600">Rua Exemplo, 1213 - Centro</p>
+                    <p class="text-gray-500 text-sm">Fone: (55) 3344-5566</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="unit-card bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h5 class="font-semibold text-2xl text-blue-700 mb-2">Santiago</h5>
+                    <p class="text-gray-600">Av. Exemplo, 1415 - Centro</p>
+                    <p class="text-gray-500 text-sm">Fone: (55) 7788-9900</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="unit-card bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h5 class="font-semibold text-2xl text-blue-700 mb-2">Bagé</h5>
+                    <p class="text-gray-600">Rua Exemplo, 1617 - Centro</p>
+                    <p class="text-gray-500 text-sm">Fone: (55) 2233-4455</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="unit-card bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h5 class="font-semibold text-2xl text-blue-700 mb-2">Vila Nova</h5>
+                    <p class="text-gray-600">Av. Exemplo, 1819 - Centro</p>
+                    <p class="text-gray-500 text-sm">Fone: (55) 6677-8899</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="contato" class="bg-gradient-to-br from-blue-700 to-blue-900 text-white py-20 fade-in">
+    <div class="container text-center">
+        <h3 class="text-4xl font-bold mb-8">Entre em Contato</h3>
+        <p class="text-lg mb-12 max-w-lg mx-auto">Agende uma consulta ou tire suas dúvidas. Estamos aqui para ajudar!</p>
+        <form class="max-w-md mx-auto space-y-6">
+            <input type="text" placeholder="Nome" class="input-field">
+            <input type="email" placeholder="Email" class="input-field">
+            <textarea placeholder="Mensagem" class="input-field h-32 resize-none"></textarea>
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+    </div>
+</section>
+
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-gray-400 py-6 text-center">
+        <p>&copy; 2024 DentalSul Implantes. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap e jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Rolagem suave para links de navegação
+        $(document).ready(function () {
+            $('a[href*="#"]').on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    const hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 70
+                    }, 800);
+                }
+            });
+        });
+    </script>
+
+    <!-- Botão do WhatsApp -->
+<a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-button" target="_blank" aria-label="Converse conosco no WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+</a>
+
+</body>
+
+</html>
