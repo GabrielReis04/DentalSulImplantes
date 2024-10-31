@@ -136,7 +136,7 @@ form.space-y-6 > * {
 
 /* Estilos para o Parallax */
 .parallax {
-    background: url('images/dentalsul-parallax.jpg') no-repeat center center fixed;
+    background: url('images/dentalsul-parallax.jpg') no-repeat center center;
     background-size: cover;
     height: 60vh;
     display: flex;
@@ -145,16 +145,7 @@ form.space-y-6 > * {
     text-align: center;
     position: relative;
     overflow: hidden;
-}
-
-.parallax-icon {
-    position: absolute;
-    font-size: 12rem; /* Tamanho do emoji gigante */
-    color: rgba(255, 255, 255, 0.1); /* Cor branca com baixa opacidade */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    background-attachment: fixed;
 }
 
 .parallax-content {
@@ -168,7 +159,7 @@ form.space-y-6 > * {
 
 .parallax-text {
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para dar contraste */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para contraste */
     font-size: 2.5rem;
     font-weight: bold;
     margin: 10px 0;
@@ -270,12 +261,13 @@ p, .text-gray-700 {
     .hero p {
         font-size: 1.25rem;
     }
-    .parallax-icon {
-        font-size: 8rem; /* Reduz tamanho do emoji no mobile */
-    }
     .parallax-text {
         font-size: 1.8rem; /* Reduz tamanho do texto no mobile */
     }
+    .parallax {
+        background-attachment: scroll; /* Fallback para dispositivos móveis */
+    }
+
 }
 
     </style>
